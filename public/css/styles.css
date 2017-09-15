@@ -1,0 +1,17 @@
+body {
+  background-color: purple;
+}
+
+#displayContacts {
+  margin: 20px;
+  width: 100%;
+}
+
+#createContact {
+  margin: 20px;
+  width: 100%;
+}
+
+input {
+  max-width: 200px;
+}

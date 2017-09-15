@@ -1,12 +1,4 @@
-<h3><%= @contact.first_name%> <%= @contact.last_name %></h3>
-
-<p><%= @contact.number %></p>
-
-
-<% @contact.addresses.each do |address| %>
-  <p><%= address[:street_address] %> <%= address[:city] %>, <%= address[:state] %> <%= address[:zip_code] %></h4>
-<% end %>
-
+<h1>Add your address.</h1>
 <form action="/output/<%= @contact.last_name %>" method="post">
   <div class="form-group">
     <label for="street_address">Street Address:</label>
@@ -27,4 +19,10 @@
   <button type="submit" class="btn btn-info">Add!</button>
 </form>
 
+<h3><%= @contact.first_name%> <%= @contact.last_name %></h3>
+<p><%= @contact.number %></p>
+<% @contact.addresses.each do |address| %>
+  <p><%= address[:street_address] %> <%= address[:city] %>, <%= address[:state] %> <%= address[:zip_code] %></h4>
+<% end %>
+<br>
 <a href='/'>Return to home page!</a>
